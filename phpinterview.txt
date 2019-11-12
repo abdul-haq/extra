@@ -1,0 +1,37 @@
+session 
+cookies
+request 
+get 
+post 
+
+(()=>{
+
+})
+
+$con=mysqli_connect (host,uname,password,database)
+$query=""
+$response=mysqli_query($con,$query)
+$data=mysqli_fetch_all($response,MYSQLI_ASSOC)
+fetch_assoc=>data with row name
+fetch_array=>data with row name and indexes
+fetch_row=>num
+
+single
+//for assoc,row,array
+<?php
+while($data=mysqli_fetch_assoc($response))
+echo $data['row name']
+?>
+//for fetch_all
+foreach($data as $key=>value)
+{
+//index k lie key
+echo $key
+echo $value['row name']
+}
+//<?= => <?php echo
+<?=""?>
+
+
+
+
